@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <p>ジャンル一覧・追加</p>
+            <%= form_with model: [:admin, @genre], local: true do |f| %>
+            <table>
+              <thead>
+                <tr>
+                  <th>ジャンル名</th>
+                  <th><%= f.text_field :name %></th>
+                  <th><%= f.submit "新規登録" %></th>
+                </tr>
+              </thead>
+            </table>
+            <% end %>
+        </div>
+    </div>
+</div>
