@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-          <div class="flex">  
+          <div>  
           <% if @genre %>
             <p>
               <strong><%= @genre.name %>一覧</strong>(全<%= @genre.items.count %>件)&emsp; &emsp;
@@ -12,7 +12,7 @@
               〜
             </p>
             <% @genre.items.each do |item| %>
-            <table>
+            <table class="d-inline-block">
               <tr>
                 <td>
                   <%= link_to item_path(item) do %>
@@ -38,7 +38,7 @@
               〜
             </p>
             <% @items.each do |item| %>
-            <table>
+            <table class="d-inline-block">
               <tr>
                 <td>
                   <%= link_to item_path(item) do %>
