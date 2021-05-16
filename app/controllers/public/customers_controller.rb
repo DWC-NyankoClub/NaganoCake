@@ -7,6 +7,18 @@ class Public::CustomersController < ApplicationController
   def edit
     @customer = Customer.find(params[:id])
   end
+  
+  def quit_confirm
+  end
+  
+  def quit
+    @customer = current_customer
+    @customer.update(is_deleted: true)
+    reset_session
+    flash[:notice] = "ご利用頂き、誠にありがとうございました。"
+    redirect_to root_path
+  end
+
 
   def update
     @customer = current_customer
