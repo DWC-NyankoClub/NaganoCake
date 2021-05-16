@@ -17,7 +17,7 @@ class Item < ApplicationRecord
   end
 
   def tax_included_price
-    tax_rate = 1.08
+    tax_rate = 1.1
     price * tax_rate
   end
 end
