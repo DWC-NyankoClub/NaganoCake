@@ -1,0 +1,74 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+            <h1>ショッピングカート</h1>
+            <%= link_to 'カートを空にする', cart_items_destroy_all_path, class:"btn btn-sm btn-danger", method: :delete %>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10">
+            <table>
+                <thead>
+                    <tr>
+                        <th>商品名</th>
+                        <th>単価（税込）</th>
+                        <th>数量</th>
+                        <th>小計</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% @sum = 0 %>
+                    <% @cart_items.each do |cart_item| %>
+                    <% if cart_item.customer.id == current_customer.id %>
+                    <tr>
+                        <td>
+                            <%= attachment_image_tag cart_item.item, :image, format: 'jpeg', size: "50x50", fallback:"no_image.jpeg" %>
+                            <%= cart_item.item.name %>
+                        </td>
+                        <td>
+                            <%= cart_item.item.price %>
+                        </td>
+                        <td>
+                         <%=form_with model: cart_item, method: :patch, local:true do |f| %>
+                            <%=f.select :quantity, [["1","1"],["2","2"],["3","3"],["4","4"],["5","5"],["6","6"],["7","7"],["8","8"],["9","9"],["10","10"]]%>
+                            <%=f.hidden_field :id, value: cart_item.id %>
+                            <%=f.submit'変更',class:"btn btn-sm btn-success"%>
+                         <% end %>
+                        </td>
+                        <td>
+                            <% @sub_total=cart_item.item.tax_included_price * cart_item.quantity %>
+                            <%=  @sub_total.round %>
+                        </td>
+                        <td>
+                            <%= link_to "削除する", destroy_cart_item_path(cart_item), class:"btn btn-sm btn-danger" ,method: :delete %>
+                        </td>
+                    </tr>
+                    <% @sum += @sub_total %>
+                    <% end %>
+                    <% end %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10">
+            <%= link_to "買い物を続ける", root_path , class:"btn btn-sm btn-primary" %>
+        </div>
+        <div class="col-md-10">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>合計金額</td>
+                        <td><%= @sum.round %></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class ="row">
+        <div class="col-md-10">
+            <%= link_to "情報入力に進む", confirm_orders_path, class:"btn btn-sm btn-success" %>
+        </div>
+    </div>
+</div>

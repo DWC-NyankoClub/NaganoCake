@@ -3,9 +3,11 @@ class Public::OrdersController < ApplicationController
   def index
     @orders = current_customer.order
   end
-  
+
   def new
-  end  
+    @order = Order.new
+    @addresses = Address.all
+  end 
   
   def show
     @orders = current_customer.order
