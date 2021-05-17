@@ -24,13 +24,13 @@
                 <td><%= item.name %></td>
               </tr>
               <tr>
-                <td><%= item.price %></td>
+                <td><%= item.price.to_s(:delimited) %></td>
               </tr>
             </table>
             <% end %>
           <% else %>
             <p>
-              <strong>商品一覧</strong>(全<%= @items.count %>件)&emsp; &emsp;
+              <strong>商品一覧</strong>(全<%= @items_all.count %>件)&emsp; &emsp;
               〜
               <% @genres.each do |genre| %> 
                 <%= link_to genre.name, items_path(id: genre), class: 'btn btn-sm' %>
@@ -50,12 +50,15 @@
                 <td><%= item.name %></td>   
               </tr>
               <tr>
-                <td><%= item.price %></td>
+                <td><%= item.price.to_s(:delimited) %></td>
               </tr>
             </table> 
             <% end %>
           <% end %>
           </div>
         </div>
+    </div>
+    <div class="row">
+      <%= paginate @items %>
     </div>
 </div>

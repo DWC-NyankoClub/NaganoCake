@@ -14,7 +14,7 @@
       <p><%= @item.description %></p>
       <table>
         <tr>
-          <td>¥<%= @item.tax_included_price.floor %>（税込）</td>
+          <td>¥<%= @item.tax_included_price.to_s(:delimited) %>（税込）</td>
         </tr>
         <tr>
         <% if @item.is_active == false %>
