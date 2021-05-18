@@ -36,7 +36,7 @@
       <%= f.radio_button :address_option, 2 %>
           <%= f.label :"登録住所からの選択"%><br>
           <div class="col-lg-3 ml-2">
-          <%= f.collection_select :address_id, Address.all, :id, :order_items, size: "30" %>
+          <%= f.collection_select :address_id, @addresses, :id, :reg_address %>
           </div><br>
 
           <%= f.radio_button :address_option, 3 %>
