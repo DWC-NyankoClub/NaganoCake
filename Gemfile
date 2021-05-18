@@ -58,3 +58,5 @@ gem "refile-mini_magick"
 gem 'pry-byebug'
 gem 'pry-rails'
 gem 'enum_help'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
