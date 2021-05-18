@@ -9,7 +9,7 @@ class Admin::OrdersController < ApplicationController
   def update
     @order = Order.find(params[:id])
     if @order.update(order_params) && @order.confirm_deposit?
-            @order.order_details.update_all(make_status: 1)
+            @order.order_items.update_all(make_status: 1)
       redirect_to admin_order_path(@order)
     else
       render :show
@@ -18,8 +18,8 @@ class Admin::OrdersController < ApplicationController
   
   private
 
-  def order_detail_params
-    params.require(:order_detail).permit(:quantity, :make_status, :price)
+  def order_item_params
+    params.require(:order_item).permit(:quantity, :make_status, :price)
   end
   def order_params
     params.require(:order).permit(:buy_status)
