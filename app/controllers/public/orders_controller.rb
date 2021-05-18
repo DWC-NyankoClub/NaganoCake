@@ -40,7 +40,7 @@ class Public::OrdersController < ApplicationController
 
      @address = Address.find(params[:order][:address_id])
      @order.postcode =  @address.postcode
-     @order.address =  @address.destination
+     @order.address =  @address.address
      @order.name = @address.name
 
     elsif @order_address == "3"
