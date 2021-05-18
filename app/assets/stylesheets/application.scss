@@ -17,3 +17,67 @@
 @import "bootstrap";
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
+
+.about {
+  text-align: center;
+}
+
+.about-title {
+  font-size: 100px;
+  font-family: 'IM Fell DW Pica SC', serif;
+}
+
+.main-visual {
+  width: 100%;
+  height: 400px;
+  margin-top: 40px;
+  background-image: url(public-top.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+.image1 {
+  width: 100%;
+  height: 400px;
+  margin-top: 40px;
+  background-image: url(image1.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+.image2 {
+  width: 100%;
+  height: 400px;
+  margin-top: 40px;
+  background-image: url(image2.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+.image3 {
+  width: 100%;
+  height: 400px;
+  margin-top: 40px;
+  background-image: url(image3.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+.image4 {
+  width: 100%;
+  height: 400px;
+  margin-top: 40px;
+  background-image: url(image4.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+
+.main-visual-content {
+  display: none;
+  width: 100%;
+  height: 400px;
+  color: white;
+  text-align: center;
+  padding-top: 80px;
+  background-color: rgba(0, 0, 0, 0.3);
+}

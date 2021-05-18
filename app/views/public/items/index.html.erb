@@ -5,11 +5,11 @@
           <% if @genre %>
             <p>
               <strong><%= @genre.name %>一覧</strong>(全<%= @genre.items.count %>件)&emsp; &emsp;
-              〜
+              ▲▽▲▽
               <% @genres.each do |genre| %> 
                 <%= link_to genre.name, items_path(id: genre), class: 'btn btn-sm' %>
               <% end %>
-              〜
+              ▲▽▲▽
             </p>
             <% @genre.items.each do |item| %>
             <table class="d-inline-block">
@@ -31,11 +31,11 @@
           <% else %>
             <p>
               <strong>商品一覧</strong>(全<%= @items_all.count %>件)&emsp; &emsp;
-              〜
+              ▲▽▲▽
               <% @genres.each do |genre| %> 
                 <%= link_to genre.name, items_path(id: genre), class: 'btn btn-sm' %>
               <% end %>
-              〜
+              ▲▽▲▽
             </p>
             <% @items.each do |item| %>
             <table class="d-inline-block">
