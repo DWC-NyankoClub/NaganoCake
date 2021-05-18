@@ -7,10 +7,10 @@ class Public::CustomersController < ApplicationController
   def edit
     @customer = Customer.find(params[:id])
   end
-  
+
   def quit_confirm
   end
-  
+
   def quit
     @customer = current_customer
     @customer.update(is_deleted: true)
@@ -35,7 +35,7 @@ class Public::CustomersController < ApplicationController
   private
 
   def customer_params
-    params.require(:customer).permit(:last_name, :first_name, :last_name_kana, :first_name_kana, :email, :postcode, :address, :phone_number, :is_deleted)
+    params.require(:customer).permit(:last_name, :first_name, :last_name_kana, :first_name_kana, :email, :postcode, :address, :telephone_number, :is_deleted)
   end
 
 end
