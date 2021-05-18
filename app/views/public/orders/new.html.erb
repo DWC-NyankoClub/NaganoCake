@@ -11,10 +11,10 @@
     <%= form_with model: @order, url: confirm_orders_path, local: true do |f| %>
        <div class="row ml-3">
         <div class="col-lg-3 ml-2">
-          <%= f.radio_button :payment_method, :クレジットカード, checked: "checked" %>
-          <%= f.label :クレジットカード %><br>
-          <%= f.radio_button :payment_method, :銀行振込 %>
-          <%= f.label :銀行振込, style: "display: inline-block;" %>
+          <%= f.radio_button :pay_type, :クレジットカード, checked: "checked" %>
+          <%= f.label :クレジットカード, class: "pay_type_label" %><br>
+          <%= f.radio_button :pay_tyoe, :銀行振込 %>
+          <%= f.label :銀行振込, class: "pay_type_label", style: "display: inline-block;" %>
         </div>
       </div><br>
 
@@ -51,11 +51,11 @@
                   </tr>
                   <tr>
                     <th>住所</th>
-                    <td> <%= f.text_field :destination, placeholder: "東京都渋⾕区代々⽊神園町0-0", :size =>"60" %></td>
+                    <td> <%= f.text_field :address, placeholder: "東京都渋⾕区代々⽊神園町0-0", :size =>"60" %></td>
                   </tr>
                   <tr>
                     <th>宛名</th>
-                    <td><%= f.text_field :delivery_name, placeholder: "令和道⼦" %></td>
+                    <td><%= f.text_field :name, placeholder: "令和道⼦" %></td>
                   </tr>
                 </tbody>
             </table>
