@@ -8,13 +8,13 @@ class Item < ApplicationRecord
 
   attachment :image
 
-  def is_active_to_string
-    if is_active == true
-      "販売中"
-    else
-      "販売停止中"
-    end
-  end
+  # def is_active_to_string
+  #   if is_active == true
+  #     "販売中"
+  #   else
+  #     "販売停止中"
+  #   end
+  # end
 
   def tax_included_price
     (price * 1.1).floor
