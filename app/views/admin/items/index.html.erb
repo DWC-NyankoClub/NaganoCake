@@ -28,7 +28,11 @@
                   </td>
                   <td><%= item.price %></td>
                   <td><%= item.genre.name %></td>
-                  <td><%= item.is_active %></td>
+                  <% if item.is_active == true %>
+                  <td class="active_color">販売中</td>
+                  <% else %>
+                  <td class="inactive_color">販売停止中</td>
+                  <% end %>
               </tbody>
              <% end %>
           </table>
