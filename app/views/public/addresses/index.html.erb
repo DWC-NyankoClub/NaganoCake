@@ -5,7 +5,8 @@
       <h5 class="d-inline-flex bg-light px-3 py-1 font-weight-bold mt-5">配送先登録/⼀覧</h5>
     </div>
 
-  <%= form_with model:@address, local:true do |f| %>
+  <%= form_with model: @address, local:true do |f| %>
+  <%= render 'shaerd/error_messages', object: f.object %>
   <table class="table table-borderless">
     <tbody>
       <tr>

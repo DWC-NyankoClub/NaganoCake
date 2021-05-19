@@ -2,6 +2,10 @@ class Order < ApplicationRecord
   belongs_to :customer
   has_many :order_items, dependent: :destroy
 
+  validates :postcode, presence: true
+  validates :address, presence: true
+  validates :name, presence: true
+
   enum pay_type: {クレジットカード:0, 銀行振込:1}
   enum buy_status: {入金待ち:0, 入金確認:1,  製作中:2, 発送準備中:3, 発送済み:4}
 
@@ -12,7 +16,7 @@ class Order < ApplicationRecord
   def cal_price(customer)
     shipping_cost + customer.cart_items.sum(&:subtotal)
   end
-  
+
   def order_item_status_auto_update
     if self.buy_status == "入金確認"
       self.order_items.each do |order_item|
@@ -24,6 +28,6 @@ class Order < ApplicationRecord
         order_item.update(make_status: "着手不可")
       end
     end
-  end  
+  end
 
 end
