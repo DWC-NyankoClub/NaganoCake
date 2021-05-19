@@ -1,11 +1,16 @@
 <div class="container">
-<div class ="row">
+ <div class ="row">
+  <div class="col-md-6 offset-md-1">
     <h1>注文情報確認</h1>
+  </div>
+ </div>
+
   <div class ="row">
-      <table>
-          <thead>
+    <div class="col-md-5">
+      <table class="table table-bordered">
+          <thead class="thead-light">
               <tr>
-                  <th>商品名</th>
+                  <th>商品名 </th>
                   <th>単価（税込）</th>
                   <th>数量</th>
                   <th>小計</th>
@@ -33,8 +38,9 @@
       </table>
 
       <% @sum = 0 %>
-      <table>
-          <thead>
+      <div class="col-xs-3 offset-md-1">
+      <table class="table table-bordered">
+          <thead class="thead-light">
           <tr>
               <th>送料</th><td><%= @order.shipping_cost %></td>
           </tr>
@@ -46,11 +52,13 @@
           </tr>
           </thead>
       </table>
+      </div>
+      </div>
     </div>
 
     <div class ="row">
-
-      <table>
+     <div class="col-xs-8">
+      <table class="table table-borderless">
           <thead>
               <tr>
                   <th>お支払い方法</th><td><%= @order.pay_type %></td>
@@ -60,8 +68,10 @@
               </tr>
           </thead>
       </table>
+      </div>
     </div>
     <div class ="row">
+      <div class="mx-auto">
         <%= form_with model: @order, url: orders_path, local: true do |f| %>
           <%= f.hidden_field :pay_type, :value => @order.pay_type %>
           <%= f.hidden_field :postcode, :value => @order.postcode %>
@@ -71,5 +81,5 @@
           <%= f.submit '注文を確定する', class:"btn btn-success" %>
           <% end %>
     </div>
-</div>
+  </div>
 </div>

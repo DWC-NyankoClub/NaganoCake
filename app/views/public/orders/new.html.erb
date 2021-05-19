@@ -9,7 +9,7 @@
      <div class="col-md-10">
        <label>支払い方法</label>
     <%= form_with model: @order, url: confirm_orders_path, local: true do |f| %>
-       <div class="row ml-3">
+       <div class="row">
         <div class="col-lg-3 ml-2">
           <%= f.radio_button :pay_type, :クレジットカード, checked: "checked" %>
           <%= f.label :クレジットカード, class: "pay_type_label" %><br>
@@ -41,7 +41,6 @@
 
           <%= f.radio_button :address_option, 3 %>
           <%= f.label :"新しいお届け先"%>
-
           <div class="col-12 ml-2">
             <table class="table table-borderless">
                 <tbody>
