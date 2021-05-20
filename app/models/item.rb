@@ -5,7 +5,7 @@ class Item < ApplicationRecord
 
   validates :name, presence: true
   validates :price, presence: true
-
+  
   attachment :image
 
 

@@ -49,6 +49,12 @@ class Public::OrdersController < ApplicationController
      @order.address = params[:order][:address]
      @order.name = params[:order][:name]
 
+    # @address = current_customer.address.build
+    # @address.postcode = params[:order][:postcode]
+    # @address.address = params[:order][:address]
+    # @address.name = params[:order][:name]
+
+
     end
 
   end
