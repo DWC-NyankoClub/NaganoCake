@@ -49,14 +49,18 @@ class Public::OrdersController < ApplicationController
      @order.address = params[:order][:address]
      @order.name = params[:order][:name]
 
-    # @address = current_customer.address.build
-    # @address.postcode = params[:order][:postcode]
-    # @address.address = params[:order][:address]
-    # @address.name = params[:order][:name]
-
-
+    #カスタマーの住所登録と入力内容の確認
+     @address = current_customer.addresses.new
+     @address.postcode = params[:order][:postcode]
+     @address.address = params[:order][:address]
+     @address.name = params[:order][:name]
+      if @address.save
+        flash[:notice] = "新しい住所が登録されました"
+      else
+        flash[:alert] = "正しい住所を入力してください"
+        redirect_back(fallback_location: root_path)
+      end
     end
-
   end
 
   def create
