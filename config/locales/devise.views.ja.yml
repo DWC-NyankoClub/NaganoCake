@@ -13,7 +13,7 @@ ja:
             price:
               blank: "が入力されていません。"
             description:
-            　blank: "が入力されていません。"            
+            　blank: "が入力されていません。"
             image:
               blank: "が選択されていません。"
             genre:
