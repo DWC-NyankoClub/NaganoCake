@@ -1,9 +1,11 @@
+<%= render "admin/items/error_messages", obj: @genre %>
+<%= notice %>
 <div class="container">
     <div class="row">
         <div class="col-md-6">
-            <h2>ジャンル一覧・追加</h2>
+            <h3>ジャンル一覧・追加</h3>
             <%= form_with model: [:admin, @genre], local: true do |f| %>
-            <table>
+            <table class="mt-3 mb-3">
               <thead>
                 <tr>
                   <th>ジャンル名</th>
@@ -19,10 +21,10 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-      <table>
+      <table class="table table-hover table-inverse">
         <thead>
           <tr>
-            <th class="text-center">ジャンル</th>
+            <th>ジャンル</th>
             <th></th>
           </tr>
         </thead>
