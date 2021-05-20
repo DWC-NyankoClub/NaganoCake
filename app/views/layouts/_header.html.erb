@@ -11,22 +11,22 @@
 
           <!--カスタマーがログインしている時 -->
           <li class="nav-item mr-5 pt-2">
-            ようこそ、<span class="text-success mr-1"><%= current_customer.last_name %><%= current_customer.first_name %></span>さん！
+            ようこそ！<span class="text-success mr-1"><%= current_customer.last_name %><%= current_customer.first_name %></span>さん！！
           </li>
-          <li class="nav-item"><%= link_to " マイページ", customer_path(current_customer), class: 'nav-link' %></li>
-          <li class="nav-item ml-1"><%= link_to "商品一覧", items_path, class: 'nav-link' %></li>
-          <li class="nav-item ml-1"><%= link_to "カート", cart_items_path, class: 'nav-link ' %></li>
-          <li class="nav-item ml-1"><%= link_to "ログアウト", destroy_customer_session_path, method: :delete, class: 'nav-link ' %></li>
+          <li class="nav-item"><%= link_to " マイページ", customer_path(current_customer), class: 'btn btn-light btn-ms nav-link fas fa-house-user' %></li>
+          <li class="nav-item ml-1"><%= link_to " 商品一覧", items_path, class: 'btn btn-light btn-ms nav-link fas fa-cheese' %></li>
+          <li class="nav-item ml-1"><%= link_to " カート", cart_items_path, class: 'btn btn-light btn-ms nav-link fas fa-cart-plus' %></li>
+          <li class="nav-item ml-1"><%= link_to " ログアウト", destroy_customer_session_path, method: :delete, class: 'btn btn-light btn-ms nav-link fas fa-sign-out-alt' %></li>
 
         <% elsif admin_signed_in? %>
 
           <!-- 管理者がログインしている時 -->
           <li class="nav-item mr-5 pt-2 text-danger">管理者としてログイン中</li>
-          <li class="nav-item"><%= link_to "商品一覧", admin_items_path, class: 'nav-link ' %></li>
-          <li class="nav-item ml-1"><%= link_to "会員一覧", admin_customers_path, class: 'nav-link ' %></li>
-          <li class="nav-item ml-1"><%= link_to "注文履歴一覧", admin_root_path , class: 'nav-link ' %></li>
-          <li class="nav-item ml-1"><%= link_to "ジャンル一覧", admin_genres_path, class: 'nav-link ' %></li>
-          <li class="nav-item ml-1"><%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class: 'nav-link ' %></li>
+          <li class="nav-item"><%= link_to " 商品一覧", admin_items_path, class: 'btn btn-light btn-ms nav-link  fas fa-cheese' %></li>
+          <li class="nav-item ml-1"><%= link_to " 会員一覧", admin_customers_path, class: 'btn btn-light btn-ms nav-link fas fa-users' %></li>
+          <li class="nav-item ml-1"><%= link_to " 注文履歴一覧", admin_root_path , class: 'btn btn-light btn-ms nav-link far fa-bookmark' %></li>
+          <li class="nav-item ml-1"><%= link_to " ジャンル一覧", admin_genres_path, class: 'btn btn-light btn-ms nav-link fas fa-clipboard-list' %></li>
+          <li class="nav-item ml-1"><%= link_to " ログアウト", destroy_admin_session_path, method: :delete, class: 'btn btn-light btn-ms nav-link fas fa-sign-out-alt' %></li>
 
         <% else %>
 
@@ -34,10 +34,10 @@
           <li class="nav-item mr-5 pt-2">
             ようこそ、<span class="text-success mr-1">ゲスト</span>さん！
           </li>
-          <li class="nav-item"><%= link_to "About", about_path, class: 'nav-link' %></li>
-          <li class="nav-item ml-1"><%= link_to "商品一覧", items_path, class: 'nav-link' %></li>
-          <li class="nav-item ml-1"><%= link_to "新規登録", new_customer_registration_path, class: 'nav-link' %></li>
-          <li class="nav-item ml-1"><%= link_to "ログイン", new_customer_session_path, class: 'nav-link' %></li>
+          <li class="nav-item"><%= link_to " About", about_path, class: 'btn btn-light btn-ms nav-link fas fa-house-user' %></li>
+          <li class="nav-item ml-1"><%= link_to " 商品一覧", items_path, class: 'btn btn-light btn-ms nav-link fas fa-cheese' %></li>
+          <li class="nav-item ml-1"><%= link_to " 新規登録", new_customer_registration_path, class: 'btn btn-light btn-ms nav-link fas fa-user-plus' %></li>
+          <li class="nav-item ml-1"><%= link_to " ログイン", new_customer_session_path, class: 'btn btn-light btn-ms nav-link fas fa-sign-in-alt' %></li>
         <% end %>
       </ul>
     </div>
