@@ -5,7 +5,7 @@ class Item < ApplicationRecord
 
   attachment :image
   
-  validates :name, :image, :price, :description, :genre_id,  presence: true
+  validates :name, :image, :price, :description, presence: true
 
 
   def tax_included_price
