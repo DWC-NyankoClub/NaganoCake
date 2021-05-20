@@ -16,8 +16,8 @@ ja:
             　blank: "が入力されていません。"
             image:
               blank: "が選択されていません。"
-            genre_id:
-              blank: "が選択されていません。"
+            genre:
+              required: "が選択されていません。"
         customer:
           attributes:
             email:
@@ -54,8 +54,8 @@ ja:
         name: "商品名"
         description: "商品説明"
         price: "価格"
-        image: "画像"
-        genre_id: "ジャンル"
+        image: "画像" 
+        genre: "ジャンル"
       customer:
         current_password: "現在のパスワード"
         first_name: "名前(名)"
