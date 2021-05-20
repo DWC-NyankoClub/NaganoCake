@@ -18,13 +18,7 @@
                   <th>ジャンル</th>
                   <th>ステータス</th>
                 </tr>
-                  <!--<tr>商品ID</tr>-->
-                  <!--<tr>商品名</tr>-->
-                  <!--<tr>税抜価格</tr>-->
-                  <!--<tr>ジャンル</tr>-->
-                  <!--<tr>ステータス</tr>-->
               </thead>
-
             <% @items.each do |item|%>
               <tbody>
                   <td><%= item.id %></td>
@@ -44,5 +38,10 @@
              <% end %>
           </table>
         </div>
+    </div>
+    <div class="row">
+      <div class="center-block mx-auto">
+        <%= paginate @items %>
+      </div>
     </div>
 </div>
