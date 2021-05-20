@@ -1,10 +1,11 @@
 <div class="container">
-  <h3 class="ml-4 mb-5">管理者ログイン</h3>
+  <h4 class="ml-4 my-5 bg-light d-inline-flex">管理人ログイン</h4><br>
+
   <%= form_with model: @admin, url: admin_session_path, id: 'new_user', class: 'new_user', local: true do |f|%>
     <div class="row ml-5">
       <label class="col-lg-3 ml-5">メールアドレス</label>
       <div class="col-lg-3">
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "sample@example.com", class: 'col-sm-12' %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "sample@example.com", size: "40" %>
       </div>
     </div><br>
 
@@ -14,12 +15,16 @@
         <em>(<%= @minimum_password_length %>文字以上)</em>
       <% end %></label>
       <div class="col-lg-3">
-        <%= f.password_field :password, autocomplete: "current-password", class: 'col-sm-12' %>
+        <%= f.password_field :password, autocomplete: "current-password", size: "40" %>
       </div>
     </div><br>
 
-    <div class="actions ml-5">
-      <%= f.submit "ログイン", class: "btn btn-primary col-lg-2 ml-5" %>
+    <div class="row">
+      <div class="col-md-8 offset-md-1">
+        <div class="actions text-center mr-5">
+          <%= f.submit "ログイン", class: "btn btn-sm btn-primary col-lg-2 px-0", size: "40" %>
+        </div>
+      </div>
     </div>
   <% end %>
 </div>

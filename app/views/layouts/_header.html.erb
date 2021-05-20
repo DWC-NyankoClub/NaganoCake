@@ -21,12 +21,14 @@
         <% elsif admin_signed_in? %>
 
           <!-- 管理者がログインしている時 -->
-          <li class="nav-item mr-5 pt-2 text-danger">管理者としてログイン中</li>
-          <li class="nav-item"><%= link_to " 商品一覧", admin_items_path, class: 'btn btn-light btn-ms nav-link  fas fa-cheese' %></li>
-          <li class="nav-item ml-1"><%= link_to " 会員一覧", admin_customers_path, class: 'btn btn-light btn-ms nav-link fas fa-users' %></li>
-          <li class="nav-item ml-1"><%= link_to " 注文履歴一覧", admin_root_path , class: 'btn btn-light btn-ms nav-link far fa-bookmark' %></li>
-          <li class="nav-item ml-1"><%= link_to " ジャンル一覧", admin_genres_path, class: 'btn btn-light btn-ms nav-link fas fa-clipboard-list' %></li>
-          <li class="nav-item ml-1"><%= link_to " ログアウト", destroy_admin_session_path, method: :delete, class: 'btn btn-light btn-ms nav-link fas fa-sign-out-alt' %></li>
+
+          <li class="nav-item mr-5 pt-2">管理者としてログイン中</li>
+          <li class="nav-item"><%= link_to "商品一覧", admin_items_path, class: 'nav-link ' %></li>
+          <li class="nav-item ml-1"><%= link_to "会員一覧", admin_customers_path, class: 'nav-link ' %></li>
+          <li class="nav-item ml-1"><%= link_to "注文履歴一覧", admin_root_path , class: 'nav-link ' %></li>
+          <li class="nav-item ml-1"><%= link_to "ジャンル一覧", admin_genres_path, class: 'nav-link ' %></li>
+          <li class="nav-item ml-1"><%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class: 'nav-link ' %></li>
+
 
         <% else %>
 
