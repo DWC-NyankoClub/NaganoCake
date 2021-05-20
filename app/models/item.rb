@@ -8,7 +8,6 @@ class Item < ApplicationRecord
   validates :name, :image, :price, :description, :genre_id,  presence: true
 
 
-
   def tax_included_price
     (price * 1.1).floor
   end
