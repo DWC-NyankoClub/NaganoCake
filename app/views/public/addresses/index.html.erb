@@ -6,7 +6,7 @@
     </div>
 
   <%= form_with model: @address, local:true do |f| %>
-  <%= render 'shaerd/error_messages', object: f.object %>
+  <%= render 'shaerd/error_messages', object: @address %>
   <table class="table table-borderless">
     <tbody>
       <tr>
