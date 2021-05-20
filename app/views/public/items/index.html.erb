@@ -5,14 +5,14 @@
           <% if @genre %>
             <p>
               <strong><%= @genre.name %>一覧</strong>(全<%= @genre.items.count %>件)&emsp; &emsp;
-              〜
+
               <% @genres.each do |genre| %>
-                <%= link_to genre.name, items_path(id: genre), class: 'btn btn-sm' %>
+                <%= link_to genre.name, items_path(id: genre), class:'btn btn-light btn-ms' %>
               <% end %>
-              〜
+
             </p>
             <% @genre.items.each do |item| %>
-            <table class="d-inline-block ml-3 mt-2">
+            <table class="d-inline-block ml-3 mt-2 ">
               <tr>
                 <td>
                   <%= link_to item_path(item) do %>
@@ -59,7 +59,7 @@
         </div>
     </div>
     <div class="row">
-      <div class="center-block mx-auto">
+      <div class="center-block mx-auto"><br><br>
         <%= paginate @items %>
       </div>
     </div>
