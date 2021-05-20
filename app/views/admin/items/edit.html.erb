@@ -1,14 +1,15 @@
+<%= render "admin/items/error_messages", obj: @item %>
 <div class ="container">
-    <div class="low">
+    <div class="row">
         <div class="col-md-2">
-          <h1>商品編集</h1>
+          <h3>商品編集</h3>
         </div>
     </div>
 
 
     <%=form_with model: [:admin, @item], local:true do |f| %>
-    <div class="low">
-        <div class="col-md-8">
+    <div class="row">
+        <div class="col-md-6">
         <div>
          <label>商品画像</label>
          <%= f.attachment_field :image %>

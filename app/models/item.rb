@@ -3,11 +3,9 @@ class Item < ApplicationRecord
   has_many :cart_items, dependent: :destroy
   has_many :order_items, dependent: :destroy
 
-  validates :name, presence: true
-  validates :price, presence: true
-  
   attachment :image
-
+  
+  validates :name, :image, :price, :description, :genre_id,  presence: true
 
 
   def tax_included_price

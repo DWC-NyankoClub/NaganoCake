@@ -17,4 +17,10 @@ class Customer < ApplicationRecord
   validates :postcode,  presence: true
   validates :address, presence: true
   validates :telephone_number, presence: true
+
+  # is_deletedがfalseならtrueを返すようにしている
+  def active_for_authentication?
+    super && (is_deleted == false)
+  end
+
 end

@@ -2,6 +2,22 @@ ja:
   activerecord:
     errors:
       models:
+        genre:
+          attributes:
+            name:
+              blank: "が入力されていません。"
+        item:
+          attributes:
+            name:
+              blank: "が入力されていません。"
+            price:
+              blank: "が入力されていません。"
+            description:
+            　blank: "が入力されていません。"            
+            image:
+              blank: "が選択されていません。"
+            genre_id:
+              blank: "が選択されていません。"
         customer:
           attributes:
             email:
@@ -32,6 +48,14 @@ ja:
             telephone_number:
               blank: "が入力されていません。"
     attributes:
+      genre:
+        name: "ジャンル名"
+      item:
+        name: "商品名"
+        description: "商品説明"
+        price: "価格"
+        image: "画像" 
+        genre_id: "ジャンル"
       customer:
         current_password: "現在のパスワード"
         first_name: "名前(名)"
@@ -46,6 +70,8 @@ ja:
         password_confirmation: "確認用パスワード"
         remember_me: "次回から自動的にログイン"
     models:
+      genre: "ジャンル"
+      item: "商品"
       customer: "ユーザ"
   devise:
     confirmations:
