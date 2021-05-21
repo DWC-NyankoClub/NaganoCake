@@ -18,20 +18,6 @@
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 
-header {
-  /* 画像ファイルの指定 */
-  background-image: url(header1.png);
-
-  /* 画像を常に天地左右の中央に配置 */
-  background-position: center center;
-
-  /* 画像をタイル状に繰り返し表示しない */
-  background-repeat: round;
-
-  /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
-  background-size: contain;
-}
-
 body {
   color: #333333;
   /* 画像ファイルの指定 */
@@ -48,6 +34,23 @@ body {
 
   font-family: 'Yusei Magic', sans-serif;
 }
+
+header {
+  /* 画像ファイルの指定 */
+  background-image: url(header1.png);
+
+  /* 画像を常に天地左右の中央に配置 */
+  background-position: center center;
+
+  /* 画像をタイル状に繰り返し表示しない */
+  background-repeat: round;
+
+  /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+  background-size: contain;
+  background-color:rgba(255,255,255,0.1);
+  background-blend-mode:lighten;
+}
+
 
 .about {
   text-align: center;
@@ -159,6 +162,9 @@ body {
   font-size: 35px;
 }
 
+.btn-light {
+  background-color: rgba(255, 255, 255, 0.7);
+
 .margin {
   margin-bottom: 0px;
 }
@@ -166,3 +172,4 @@ body {
 .text-top {
   font-size: 50px;
 }
+
