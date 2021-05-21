@@ -24,9 +24,8 @@
           <p class="btn-animation-02"><span><%= link_to genre.name, items_path(id: genre), class: 'btn btn-sm' %></span></p>
         <% end %>
       </div>
-
+      <h4 class="d-inline-flex bg-light px-3 py-1 font-weight-bold mt-5">New Sweets</h4>
       <div class="new-items">
-        <h3>New Sweets</h3>
         <% @items.each do |item| %>
         <table class= "d-inline-block ml-5">
           <tr>
@@ -50,11 +49,11 @@
           </tr>
         </table>
         <% end %>
-        <p class="text-md-right">
-          <%= link_to "全ての商品を見る>", items_path %>
+        <p class="text-md-right pb-3">
+          <%= link_to "All Sweets ▶︎▶︎", items_path, class: 'btn btn-sm' %>
         </p>
       </div>
-
+      
     </div>
   </div>
 </div>

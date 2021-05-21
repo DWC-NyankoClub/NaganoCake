@@ -1,14 +1,16 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h3>注文履歴一覧</h3>
+      <h3 class="ml-1 my-4 bg-light d-inline-flex">注文履歴一覧</h3>
       <table class="table-light table table-hover">
-        <thead class="thead-light">
+        <thead class="table-secondary">
           <tr>
             <th>注文日</th>
             <th>配送先</th>
             <th>注文商品</th>
             <th>支払い金額</th>
+            <th>ステータス</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -27,7 +29,7 @@
             </td>
             <td><%= order.total_price %>円</td>
             <td><%= order.buy_status %></td>
-            <td><%= link_to "表示する", order_path(order), class: "btn btn-light btn-sm" %></td>
+            <td><%= link_to "表示する", order_path(order), class: "btn btn-dark btn-sm" %></td>
           </tr>
         <% end %>
         </tbody>
