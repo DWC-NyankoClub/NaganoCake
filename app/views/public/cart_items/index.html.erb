@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-10"><br>
             <h2><i class="fas fa-cart-plus"></i> ショッピングカート</h2>
-            <p><%= link_to 'カートを空にする', cart_items_destroy_all_path, class:"btn btn-sm btn-outline-danger", method: :delete %></p>
+            <p><%= link_to 'カートを空にする', cart_items_destroy_all_path, class:"btn btn-sm btn-danger", method: :delete %></p>
         </div>
     </div>
     <div class="row">
@@ -27,7 +27,7 @@
                             <%= cart_item.item.name %>
                         </td>
                         <td>
-                            ¥<%= cart_item.item.price.to_s(:delimited) %>
+                            ¥<%= cart_item.item.tax_included_price.to_s(:delimited) %>
                         </td>
                         <td>
                          <%=form_with model: cart_item, method: :patch, local:true do |f| %>
@@ -53,7 +53,7 @@
     </div>
     <div class="row">
         <div class="col-md-10">
-            <p><%= link_to "買い物を続ける", root_path , class:"btn btn-sm btn-outline-primary" %></p>
+            <p><%= link_to "買い物を続ける", root_path , class:"btn btn-sm btn-primary" %></p>
         </div>
         <div class="col-md-5">
             <table class="table-light table">

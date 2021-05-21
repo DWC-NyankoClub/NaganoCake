@@ -1,15 +1,8 @@
-<div class ="container">
+<div class ="container my-4">
     <div class="row">
-        <div class="col-md-8">
-          <div class="row">
-            <div>
-                <h3 class="ml-3 mt-2">商品一覧</h3>
-            </div>
-            <div class="ml-4 mt-2">
-                <%= link_to "", new_admin_item_path, class:"fas fa-plus-circle fa-2x new_btn_color" %>
-            </div>
-          </div>
-          <table class="table-light table table-hover table-inverse">
+      <div class="col-md-8 my-1">
+        <h3>商品一覧<%= link_to "", new_admin_item_path, class:"fas fa-plus-circle new_btn_color" %></h3>
+        <table class="table-light table table-hover table-inverse">
               <thead class="thead-light">
                 <tr>
                   <th>商品ID</th>
