@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8">
-      <h3>会員一覧</h3>
+      <h3 class="mt-2">会員一覧</h3>
       <table class="table-light table table-hover ">
         <thead class="thead-light">
           <tr>
@@ -19,11 +19,11 @@
               <td><%= customer.email %></td>
               <td>
                 <% if customer.is_deleted == false %>
-                <p class="active_color">
+                <p class="margin">
                   有効
                 </p>
                 <% else %>
-                <p class="inactive_color">
+                <p class="margin">
                   退会
                 </p>
                 <% end %>
