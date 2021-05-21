@@ -2,6 +2,14 @@ ja:
   activerecord:
     errors:
       models:
+        address:
+          attributes:
+            postcode:
+              blank: "が入力されていません。"
+            address:
+              blank: "が入力されていません。"
+            name:
+              blank: "が入力されていません。"
         genre:
           attributes:
             name:
@@ -10,10 +18,10 @@ ja:
           attributes:
             name:
               blank: "が入力されていません。"
+            description:
+              blank: "が入力されていません。"
             price:
               blank: "が入力されていません。"
-            description:
-            　blank: "が入力されていません。"
             image:
               blank: "が選択されていません。"
             genre:
@@ -48,6 +56,10 @@ ja:
             telephone_number:
               blank: "が入力されていません。"
     attributes:
+      address:
+        postcode: "郵便番号"
+        address: "住所"
+        name: "宛名"
       genre:
         name: "ジャンル名"
       item:
