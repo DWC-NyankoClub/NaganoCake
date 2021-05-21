@@ -20,7 +20,7 @@ Admin.create!(
     address: "テストデータ住所#{n}",
     telephone_number: "0800000#{n}",
     email: "user#{n}@test.com",
-    password: "testtest"
+    password: "000000"
   )
 end
 
