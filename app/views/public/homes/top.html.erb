@@ -5,8 +5,8 @@
       <div class="theTarget">
         <div class="main-visual">
           <div class="main-visual-content">
-            <div class="shop-name">
-              <p class="text-light">NAGANO CAKE</p>
+            <div>
+              <p>NAGANO CAKE</p>
             </div>
               <p class="text-white">ようこそ、ながのCAKEへ！</p>
               <p class="text-white">このサイトは、ケーキ販売のECサイトになります。</p>
@@ -19,16 +19,14 @@
           <div class="image3"></div>
       </div>
 
-      <div class="genre-button text-center mt-5">
-        ▲▽▲▽
+      <div class="text-center mt-5">
         <% @genres.each do |genre| %>
-          <%= link_to genre.name, items_path(id: genre), class: 'btn btn-sm' %>
+          <p class="btn-animation-02"><span><%= link_to genre.name, items_path(id: genre), class: 'btn btn-sm' %></span></p>
         <% end %>
-        ▲▽▲▽
       </div>
 
       <div class="new-items">
-        <h3>新着商品</h3>
+        <h3>New Sweets</h3>
         <% @items.each do |item| %>
         <table class= "d-inline-block ml-5">
           <tr>

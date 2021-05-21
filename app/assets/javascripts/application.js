@@ -18,11 +18,11 @@
 //= require turbolinks
 //= require_tree .
 
-$(function(){
+$(document).on('turbolinks:load', function(){
   $('.main-visual-content').slideDown(3000);
 });
 
-$(document).ready(function () {
+$(document).on('turbolinks:load', function () {
   $(".theTarget").skippr({
     // スライドショーの変化 ("fade" or "slide")
     transition : 'fade',

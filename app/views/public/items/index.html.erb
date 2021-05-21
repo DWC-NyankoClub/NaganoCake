@@ -3,14 +3,13 @@
         <div class="col-md-12 mt-3">
           <div>
           <% if @genre %>
-            <p>
-              <strong><%= @genre.name %>一覧</strong>(全<%= @genre.items.count %>件)&emsp; &emsp;
-
-              <% @genres.each do |genre| %>
-                <%= link_to genre.name, items_path(id: genre), class:'btn btn-light btn-ms' %>
-              <% end %>
-
-            </p>
+            <strong class="text-genre"><%= @genre.name %></strong>(全<%= @genre.items.count %>件)&emsp; &emsp;
+              <div class="text-center mt-3">
+                <% @genres.each do |genre| %>
+                <p class="btn-animation-02"><span><%= link_to genre.name, items_path(id: genre), class: 'btn btn-sm' %></span></p>
+                <% end %>
+              </div>
+              
             <% @genre.items.each do |item| %>
             <table class="d-inline-block ml-3 mt-2 ">
               <tr>
@@ -29,14 +28,12 @@
             </table>
             <% end %>
           <% else %>
-            <p>
-              <strong>商品一覧</strong>(全<%= @items_all.count %>件)&emsp; &emsp;
-              〜
-              <% @genres.each do |genre| %>
-                <%= link_to genre.name, items_path(id: genre), class: 'btn btn-sm' %>
-              <% end %>
-              〜
-            </p>
+            <strong class="text-genre">Sweets</strong>(全<%= @items_all.count %>件)&emsp; &emsp;
+               <div class="genre-button text-center mt-3">
+                 <% @genres.each do |genre| %>
+                  <p class="btn-animation-02"><span><%= link_to genre.name, items_path(id: genre), class: 'btn btn-sm' %></span></p>
+                 <% end %>
+               </div>
             <% @items.each do |item| %>
             <table class="rounded d-inline-block ml-3 mt-2 table-light ">
               <tr>
