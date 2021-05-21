@@ -21,7 +21,7 @@
           <td>売り切れ</td>
         <% else %>
           <td><%= f.select :quantity, [*(1..10)], { include_blank: '個数選択' } %></td>
-          <td><%= f.submit "カートに入れる", class: 'btn btn-outline-success btn-sm' %></td>
+          <td><%= f.submit "カートに入れる", class: 'btn btn-success btn-sm' %></td>
         <% end %>
         </tr>
       </table>

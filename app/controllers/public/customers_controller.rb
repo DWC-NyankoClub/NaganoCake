@@ -1,11 +1,12 @@
 class Public::CustomersController < ApplicationController
+  before_action :authenticate_customer!, except: [:quit]
 
   def show
-    @customer = Customer.find(params[:id])
+    @customer = current_customer
   end
 
   def edit
-    @customer = Customer.find(params[:id])
+    @customer = current_customer
   end
 
   def quit_confirm

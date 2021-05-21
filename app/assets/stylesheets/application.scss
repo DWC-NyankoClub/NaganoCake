@@ -33,6 +33,7 @@ header {
 }
 
 body {
+  color: #333333;
   /* 画像ファイルの指定 */
   background-image: url(05-white-brick.png);
 
@@ -44,12 +45,9 @@ body {
 
   /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
   background-attachment: fixed;
-  
+
   font-family: 'Yusei Magic', sans-serif;
-
- 
 }
-
 
 .about {
   text-align: center;
