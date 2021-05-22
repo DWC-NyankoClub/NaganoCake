@@ -9,7 +9,7 @@
                 <tr>
                   <th>ジャンル名</th>
                   <th><%= f.text_field :name %></th>
-                  <th><%= f.submit "新規登録" %></th>
+                  <th><%= f.submit "新規登録", class:"btn btn-sm btn-success" %></th>
                 </tr>
               </thead>
             </table>
@@ -42,5 +42,5 @@
     <div class="center-block mx-auto">
       <%= paginate @genres %>
     </div>
-  </div>  
+  </div>
 </div>

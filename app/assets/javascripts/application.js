@@ -15,8 +15,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require activestorage
 //= require turbolinks
 //= require_tree .
+/* global $*/
 
 $(document).on('turbolinks:load', function(){
   $('.main-visual-content').slideDown(3000);
@@ -27,7 +29,7 @@ $(document).on('turbolinks:load', function () {
     // スライドショーの変化 ("fade" or "slide")
     transition : 'fade',
     // 変化に係る時間(ミリ秒)
-    speed : 1000,
+    speed : 2000,
     // easingの種類
     easing : 'easeOutQuart',
     // ナビゲーションの形("block" or "bubble")
@@ -39,10 +41,19 @@ $(document).on('turbolinks:load', function () {
     // スライドショーの自動再生(falseで自動再生なし)
     autoPlay : true,
     // 自動再生時のスライド切替間隔(ミリ秒)
-    autoPlayDuration : 2500,
+    autoPlayDuration : 3500,
     // キーボードの矢印キーによるスライド送りの設定(trueで有効)
     keyboardOnAlways : true,
     // 一枚目のスライド表示時に戻る矢印を表示するかどうか(falseで非表示)
     hidePrevious : false
+  });
+});
+
+
+$(window).on('turbolinks:load',function(){
+  $("#splash").delay(2000).fadeOut(1000);//ローディング画面を1.5秒（1500ms）待機してからフェードアウト
+  $("#splash_logo").delay(1500).fadeOut('slow',function(){
+      // $("#splash_logo2").css('opacity','0.5');
+      // $("#splash_logo2").addClass('fadeUp');
   });
 });
