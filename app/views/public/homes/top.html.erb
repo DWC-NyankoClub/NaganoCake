@@ -14,9 +14,9 @@
               <p class="text-white">購入には会員登録が必要になります。</p>
           </div>
         </div>
-          <div class="image1"></div>
-          <div class="image2"></div>
-          <div class="image3"></div>
+        <div class="image1"></div>
+        <div class="image2"></div>
+        <div class="image3"></div>
       </div>
 
       <div class="text-center mt-5">
@@ -24,7 +24,7 @@
           <p class="btn-animation-02"><span><%= link_to genre.name, items_path(id: genre), class: 'btn btn-sm' %></span></p>
         <% end %>
       </div>
-      <h4 class="d-inline-flex bg-light px-3 py-1 font-weight-bold mt-5">New Sweets</h4>
+      <h4 class="d-inline-flex px-3 py-1 font-weight-bold mt-5">New Sweets</h4>
       <div class="new-items">
         <% @items.each do |item| %>
         <table class= "d-inline-block ml-5">
@@ -50,10 +50,10 @@
         </table>
         <% end %>
         <p class="text-md-right pb-3">
-          <%= link_to "All Sweets ▶︎▶︎", items_path, class: 'btn btn-sm' %>
+          <%= link_to "All Sweets ▶︎▶︎", items_path, class: 'btn bt-md' %>
         </p>
       </div>
-      
+
     </div>
   </div>
 </div>
